@@ -49,6 +49,9 @@
 ═══════════════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; image-rendering: pixelated; }
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 
 body {
   background: var(--bg);
