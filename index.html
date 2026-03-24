@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="pokedex.css">
+  <title>기술 도감</title>
+</head>
+<body>
+<div id="app">
+
+  <!-- 헤더 -->
+  <header>
+    <div class="header-title-wrap">
+      <h1>기술 도감</h1>
+      <p>Made By Sonnet With Ampharos!</p>
+    </div>
+    <div class="header-screen" id="header-screen">
+      기술 수<br>
+      <span class="count-num" id="header-count">—</span>
+    </div>
+  </header>
+
+  <!-- 검색 -->
+  <div id="search-wrap">
+    <input id="search" type="text" placeholder="기술 이름으로 검색" autocomplete="off" />
+  </div>
+
+  <!-- 필터 -->
+  <div class="filter-section">
+    <div class="filter-label">타입으로 필터</div>
+    <div id="filter-row"></div>
+  </div>
+
+  <!-- 결과 수 -->
+  <div id="result-count"></div>
+
+  <!-- 그리드 -->
+  <div id="grid"></div>
+
+  <!-- 빈 상태 -->
+  <div id="empty">
+    <p>검색 결과가 없습니다</p>
+  </div>
+
+</div>
+
+<!-- 모달 오버레이 -->
+<div id="overlay">
+  <div id="modal" role="dialog" aria-modal="true">
+    <button id="close-btn" aria-label="닫기">✕</button>
+    <div class="modal-titlebar">
+      <div class="modal-title" id="m-name"></div>
+      <div class="modal-badges" id="m-badges"></div>
+    </div>
+    <div class="modal-body" id="m-body"></div>
+  </div>
+</div>
+
+<script src="moves.js"></script>
+<script src="pokedex.js"></script>
+
+
+<script>
+  const headerCount = document.getElementById('header-count');
+  const resultCount = document.getElementById('result-count');
+  const obs = new MutationObserver(() => {
+    const match = resultCount.textContent.match(/\d+/);
+    if (match) headerCount.textContent = match[0];
+  });
+  obs.observe(resultCount, { childList: true, subtree: true, characterData: true });
+</script>
+</body>
+</html>
