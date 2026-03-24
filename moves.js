@@ -289,7 +289,7 @@ const MOVES = {
   },
 
   "깨트리기": {
-    name: "깨뜨리기",
+    name: "깨트리기",
     type: "격투",
     category: "물리",
     power: 45,
