@@ -85,6 +85,20 @@ const MOVES = {
     description: "바둥바둥 난동부려서 공격한다. 자신의 HP가 적을수록 기술의 위력이 올라간다.",
   },
 
+  "힘껏치기": {
+    name: "힘껏치기",
+    type: "노말",
+    category: "물리",
+    power: 50,
+    accuracy: 75,
+    pp: 20,
+    priority: 1,
+    rankChange: null,
+    effect: null,
+    alwaysHit: null,
+    description: "긴 꼬리나 덩굴 등을 사용해 상대를 힘껏 쳐서 공격한다.",
+  },
+
   // ── 불꽃 ───────────────────────────────────
   "화염방사": {
     name: "화염방사",
@@ -258,6 +272,21 @@ const MOVES = {
     description: "자연으로부터 생명의 힘을 모아서 발사한다. 상대의 방어를 떨어뜨릴 때가 있다.",
   },
 
+  "흡수": {
+    name: "흡수",
+    type: "풀",
+    category: "특수",
+    power: 30,
+    accuracy: 100,
+    pp: 25,
+    priority: 0,
+    rankChange: null,
+    effect: null,
+    effect: "상대에게 준 피해의 12%만큼 체력을 회복한다.",
+    alwaysHit: false,
+    description: "양분을 흡수하여 공격한다. 상대에게 준 피해의 12%만큼 체력을 회복한다.",
+  },
+
   // ── 얼음 ─────────────────────────────────
   "냉동빔": {
     name: "냉동빔",
@@ -389,6 +418,20 @@ const MOVES = {
     description: "강인한 꼬리를 세차게 휘둘러서 상대를 공격한다. 상대의 공격을 -1 떨어뜨린다.",
   },
 
+  "용성군": {
+    name: "용성군",
+    type: "드래곤",
+    category: "특수",
+    power: 70,
+    accuracy: 90,
+    pp: 5,
+    priority: 0,
+    rankChange: { target: "self", stat: "atk", stage: -2 },
+    effect: "사용 후 자신의 공격이 -2 하락한다.",
+    alwaysHit: false,
+    description: "천공에서 운석을 떨어뜨린다. 사용하면 반동으로 자신의 공격이 -2 떨어진다.",
+  },
+
   // ── 벌레 ───────────────────────────────────
   "달려들기": {
     name: "달려들기",
@@ -402,6 +445,21 @@ const MOVES = {
     effect: null,
     alwaysHit: false,
     description: "상대에게 달려들어 공격한다. 상대의 스피드를 -1 떨어뜨린다.",
+  },
+
+  "흡혈": {
+    name: "흡혈",
+    type: "벌레",
+    category: "특수",
+    power: 50,
+    accuracy: 100,
+    pp: 10,
+    priority: 0,
+    rankChange: null,
+    effect: null,
+    effect: "상대에게 준 피해의 12%만큼 체력을 회복한다.",
+    alwaysHit: false,
+    description: "피를 빨아서 상대를 공격한다. 상대에게 준 피해의 12%만큼 체력을 회복한다.",
   },
 
  // ── 땅 ───────────────────────────────────
@@ -446,6 +504,35 @@ const MOVES = {
     effect: "10% 확률로 상대의 방어가 -1 하락한다.",
     alwaysHit: false,
     description: "강한 산을 상대에게 끼얹어 공격한다. 10% 확률로 상대의 방어를 -1 떨어뜨린다.",
+  },
+
+  // ── 고스트 ───────────────────────────────────
+  "고스트다이브": {
+    name: "고스트다이브",
+    type: "고스트",
+    category: "특수",
+    power: 50,
+    accuracy: 100,
+    pp: 10,
+    priority: 0,
+    rankChange: null,
+    effect: null,
+    alwaysHit: false,
+    description: "1턴째에 어디론가 사라져서 2턴째에 상대를 공격한다. 기술 방어를 무시하고 공격할 수 있다.",
+  },
+
+  "섀도볼": {
+    name: "섀도볼",
+    type: "고스트",
+    category: "특수",
+    power: 50,
+    accuracy: 100,
+    pp: 15,
+    priority: 0,
+    rankChange: { target: "foe", stat: "def", stage: -1 },
+    effect: "20% 확률로 상대의 방어가 -1 하락한다.",
+    alwaysHit: false,
+    description: "까만 그림자의 덩어리를 내던져서 공격한다. 20% 확률로 상대의 방어를 -1 떨어뜨린다.",
   },
 
 };
