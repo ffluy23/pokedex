@@ -15,6 +15,20 @@ const MOVES = {
     description: "눈에 보이지 않는 굉장한 속도로 상대에게 돌진한다. 반드시 명중한다.",
   },
 
+  "더블어택": {
+    name: "더블어택",
+    type: "노말",
+    category: "물리",
+    power: 25,
+    accuracy: 90,
+    pp: 10,
+    priority: 1,
+    rankChange: null,
+    effect: "1턴에 2회 연속으로 공격할 수 있다.",
+    alwaysHit: null,
+    description: "꼬리 등을 써서 상대를 때려 공격한다. 2회 연속으로 피해를 준다.",
+  },
+
   "방어": {
     name: "방어",
     type: "노말",
@@ -430,7 +444,20 @@ const MOVES = {
     alwaysHit: false,
     description: "상대에 대한 울분이 담긴 공격을 한다. <br>그 턴에 능력이 떨어져 있으면 기술의 위력이 1.3배가 된다.",
   },
-  
+
+  "깨물어부수기": {
+    name: "깨물어부수기",
+    type: "악",
+    category: "특수",
+    power: 50,
+    accuracy: 100,
+    pp: 15,
+    priority: 0,
+    rankChange: { target: "foe", stat: "def", stage: -1 },
+    effect: "20% 확률로 상대의 방어가 -1 하락한다.",
+    alwaysHit: false,
+    description: "날카로운 이빨로 상대를 깨물어 부숴서 공격한다. <br>20% 확률로 상대의 방어를 -1 떨어뜨린다.",
+  },
 
   // ── 드래곤 ───────────────────────────────
   "용의파동": {
@@ -593,7 +620,7 @@ const MOVES = {
   },
 
 // ── 페어리 ───────────────────────────────────
-"페어리": {
+"치근거리기": {
     name: "치근거리기",
     type: "페어리",
     category: "특수",
@@ -605,6 +632,49 @@ const MOVES = {
     effect: "10% 확률로 상대의 공격이 -1 하락한다.",
     alwaysHit: false,
     description: "상대에게 치근거리며 공격한다. 10% 확률로 상대의 공격을 떨어뜨린다.",
+  },
+
+  "초롱초롱눈망울": {
+    name: "초롱초롱눈망울",
+    type: "페어리",
+    category: "특수",
+    power: null,
+    accuracy: 100,
+    pp: 30,
+    priority: 0,
+    rankChange: { target: "foe", stat: "atk", stage: -1 },
+    effect: "10% 확률로 상대의 공격이 -1 하락한다.",
+    alwaysHit: true,
+    description: "초롱초롱한 눈동자로 상대를 바라보며 공격을 -1 떨어뜨린다. <br>반드시 선제공격할 수 있다.",
+  },
+
+ // ── 바위 ───────────────────────────────────
+"스톤에지": {
+    name: "스톤에지",
+    type: "바위",
+    category: "특수",
+    power: 50,
+    accuracy: 80,
+    pp: 5,
+    priority: 0,
+    rankChange: null,
+    effect: "급소에 맞을 확률이 높다.",
+    alwaysHit: null,
+    description: "뾰족한 바위를 상대에게 꿰찔러서 공격한다. 급소에 맞을 확률이 높다.",
+  },
+
+  "암석봉인": {
+    name: "암석봉인",
+    type: "바위",
+    category: "특수",
+    power: 40,
+    accuracy: 95,
+    pp: 15,
+    priority: 0,
+    rankChange: { target: "foe", stat: "spd", stage: -1 },
+    effect: "상대의 스피드가 -1 하락한다.",
+    alwaysHit: null,
+    description: "암석을 내던져서 공격한다. <br>상대의 움직임을 봉인함으로 스피드를 -1 떨어뜨린다.",
   },
 
 };
