@@ -389,6 +389,49 @@ const MOVES = {
     description: "몸에서 악의로 가득한 무서운 오라를 발한다. 상대를 풀죽게 만들 때가 있다.",
   },
 
+  "바크아웃": {
+    name: "바크아웃",
+    type: "악",
+    category: "특수",
+    power: 40,
+    accuracy: 95,
+    pp: 15,
+    priority: 0,
+    rankChange: { target: "foe", stat: "atk", stage: -1 },
+    effect: "10% 확률로 상대의 공격이 -1 하락한다.",
+    alwaysHit: false,
+    description: "호되게 호통을 쳐서 상대의 공격을 -1 떨어뜨린다.",
+  },
+
+  "거짓울음": {
+    name: "거짓울음",
+    type: "악",
+    category: "특수",
+    power: null,
+    accuracy: 100,
+    pp: 20,
+    priority: 0,
+    rankChange: { target: "foe", stat: "def", stage: -2 },
+    effect: "상대의 방어가 -2 하락한다.",
+    alwaysHit: false,
+    description: "우는 척을 하며 눈물을 흘린다. 난처하게 만들어 상대의 방어를 -2 떨어뜨린다.",
+  },
+
+  "분풀이": {
+    name: "분풀이",
+    type: "악",
+    category: "특수",
+    power: 45,
+    accuracy: 100,
+    pp: 5,
+    priority: 0,
+    rankChange: null,
+    effect: "해당 자신의 턴에 능력이 떨어져 있으면 위력 ×1.3",
+    alwaysHit: false,
+    description: "상대에 대한 울분이 담긴 공격을 한다. <br>그 턴에 능력이 떨어져 있으면 기술의 위력이 1.3배가 된다.",
+  },
+  
+
   // ── 드래곤 ───────────────────────────────
   "용의파동": {
     name: "용의파동",
@@ -491,6 +534,20 @@ const MOVES = {
     description: "분함을 발판삼아 공격한다. 앞 턴에서 기술이 빗나갔다면 위력이 1.3배가 된다.",
   },
 
+  "지진": {
+    name: "지진",
+    type: "땅",
+    category: "특수",
+    power: 50,
+    accuracy: 100,
+    pp: 10,
+    priority: 0,  
+    rankChange: null,
+    effect: null,
+    alwaysHit: false,
+    description: "지진의 충격으로 자신의 주위에 있는 포켓몬을 공격한다.",
+  },
+
   // ── 독 ───────────────────────────────────
   "용해액": {
     name: "용해액",
@@ -535,4 +592,20 @@ const MOVES = {
     description: "까만 그림자의 덩어리를 내던져서 공격한다. 20% 확률로 상대의 방어를 -1 떨어뜨린다.",
   },
 
+// ── 페어리 ───────────────────────────────────
+"페어리": {
+    name: "치근거리기",
+    type: "페어리",
+    category: "특수",
+    power: 50,
+    accuracy: 90,
+    pp: 10,
+    priority: 0,
+    rankChange: { target: "foe", stat: "atk", stage: -1 },
+    effect: "10% 확률로 상대의 공격이 -1 하락한다.",
+    alwaysHit: false,
+    description: "상대에게 치근거리며 공격한다. 10% 확률로 상대의 공격을 떨어뜨린다.",
+  },
+
 };
+
