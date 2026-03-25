@@ -639,7 +639,7 @@ const MOVES = {
     type: "페어리",
     category: "특수",
     power: null,
-    accuracy: 100,
+    accuracy: null,
     pp: 30,
     priority: 0,
     rankChange: { target: "foe", stat: "atk", stage: -1 },
