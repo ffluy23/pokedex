@@ -459,6 +459,21 @@ const MOVES = {
     description: "날카로운 이빨로 상대를 깨물어 부숴서 공격한다. <br>20% 확률로 상대의 방어를 -1 떨어뜨린다.",
   },
 
+   "속임수": {
+    name: "속임수",
+    type: "악",
+    category: "물리",
+    power: 50,
+    accuracy: 100,
+    pp: 15,
+    priority: 0,
+    rankChange:null,
+    effect:null,
+    alwaysHit: false,
+    description: "상대의 공격이 높을수록 위력이 올라갑니다. 자신의 공격 스탯이 아닌 상대의 공격 스탯을 이용해 공격합니다.",
+  },
+
+
   // ── 드래곤 ───────────────────────────────
   "용의파동": {
     name: "용의파동",
